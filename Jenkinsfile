@@ -15,11 +15,13 @@ node{
       }
     }
     stage('junit'){
-        junit '**/*.xml'
+        //junit '**/*.xml'
+        
+        sh 'echo hi'
     }
     stage('package'){
         withMaven( jdk: 'java8', maven: 'maven 3') {
-           sh 'echo helloee'
+           sh 'echo package'
       }
     }
     
