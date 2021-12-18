@@ -4,13 +4,14 @@ node{
     }
      stage('maven'){
       withMaven( jdk: 'java8', maven: 'maven 3') {
-         sh 'mvn compile'
+         //sh 'mvn compile'
+          sh 'echo hello'
       }
     }
    
     stage('test'){
         withMaven( jdk: 'java8', maven: 'maven 3') {
-            sh 'mvn test'
+            sh 'echo hi'
       }
     }
     stage('junit'){
@@ -18,7 +19,7 @@ node{
     }
     stage('package'){
         withMaven( jdk: 'java8', maven: 'maven 3') {
-            sh 'mvn package'
+           sh 'echo helloee'
       }
     }
     
